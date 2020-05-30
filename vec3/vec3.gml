@@ -11,7 +11,6 @@ function vec3(_x, _y, _z)
 		x = _x;
 		y = _y;
 		z = _z;
-		return self; // chaining.
 	}
 	
 	// returns a copy of this vector.
@@ -26,7 +25,6 @@ function vec3(_x, _y, _z)
 		x += v.x;
 		y += v.y;
 		z += v.z;
-		return self; // chaining.
 	}
 	
 	// subtracts another vector from this vector.
@@ -35,7 +33,6 @@ function vec3(_x, _y, _z)
 		x -= v.x;
 		y -= v.y;
 		z -= v.z;
-		return self; // chaining.
 	}
 	
 	// multiplies this vector by another vector.
@@ -44,7 +41,6 @@ function vec3(_x, _y, _z)
 		x *= v.x;
 		y *= v.y;
 		z *= v.z;
-		return self; // chaining.
 	}
 	
 	// divides this vector by another vector.
@@ -53,7 +49,6 @@ function vec3(_x, _y, _z)
 		x /= v.x;
 		y /= v.y;
 		z /= v.z;
-		return self; // chaining.
 	}
 	
 	// returns the length of this vector.
@@ -84,13 +79,14 @@ function vec3(_x, _y, _z)
 			y = 0;
 			z = 0;
 		}
-		return self; // chaining.
 	}
 	
 	// returns a new vector with a magnitude of 1.
 	function normalized()
 	{
-		return new vec3(x, y, z).normalize();
+		var v = new vec3(x, y, z);
+		v.normalize();
+		return v;
 	}
 	
 	// returns whether this vector equals another vector.
@@ -153,7 +149,11 @@ function vec3_dot(lhs, rhs)
 // reflects a vector off the plane defined by a normal.
 function vec3_reflect(direction, normal)
 {
-	return vec3(-2.0, -2.0, -2.0).mul(vec3_dot(normal, direction)).mul(normal).add(direction);
+	var v = vec3(-2.0, -2.0, -2.0);
+	v.mul(vec3_dot(normal, direction));
+	v.mul(normal);
+	v.add(direction);
+	return v;
 }
 
 // returns the angle in degrees between from and to.
@@ -165,7 +165,9 @@ function vec3_angle(from, to)
 // returns the distance between a and b.
 function vec3_distance(a, b)
 {
-	return new vec3(a.x, a.y, a.z).sub(b).magnitude();
+	var v = new vec3(a.x, a.y, a.z);
+	v.sub(b);
+	return v.magnitude();
 }
 
 // returns a vector that is made from the smallest components of two vectors.

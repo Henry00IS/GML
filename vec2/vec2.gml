@@ -9,7 +9,6 @@ function vec2(_x, _y)
 	{
 		x = _x;
 		y = _y;
-		return self; // chaining.
 	}
 	
 	// returns a copy of this vector.
@@ -23,7 +22,6 @@ function vec2(_x, _y)
 	{
 		x += v.x;
 		y += v.y;
-		return self; // chaining.
 	}
 	
 	// subtracts another vector from this vector.
@@ -31,7 +29,6 @@ function vec2(_x, _y)
 	{
 		x -= v.x;
 		y -= v.y;
-		return self; // chaining.
 	}
 	
 	// multiplies this vector by another vector.
@@ -39,7 +36,6 @@ function vec2(_x, _y)
 	{
 		x *= v.x;
 		y *= v.y;
-		return self; // chaining.
 	}
 	
 	// divides this vector by another vector.
@@ -47,7 +43,6 @@ function vec2(_x, _y)
 	{
 		x /= v.x;
 		y /= v.y;
-		return self; // chaining.
 	}
 	
 	// returns the length of this vector.
@@ -76,13 +71,14 @@ function vec2(_x, _y)
 			x = 0;
 			y = 0;
 		}
-		return self; // chaining.
 	}
 	
 	// returns a new vector with a magnitude of 1.
 	function normalized()
 	{
-		return new vec2(x, y).normalize();
+		var v = new vec2(x, y);
+		v.normalize();
+		return v;
 	}
 	
 	// returns whether this vector equals another vector.
@@ -139,7 +135,11 @@ function vec2_dot(lhs, rhs)
 // reflects a vector off the vector defined by a normal.
 function vec2_reflect(direction, normal)
 {
-	return vec2(-2.0, -2.0).mul(vec2_dot(normal, direction)).mul(normal).add(direction);
+	var v = new vec2(-2.0, -2.0);
+	v.mul(vec2_dot(normal, direction));
+	v.mul(normal);
+	v.add(direction);
+	return v;
 }
 
 // returns the angle in degrees between from and to.
