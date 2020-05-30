@@ -27,12 +27,28 @@ function vec3(_x, _y, _z)
 		z += v.z;
 	}
 	
+	// adds a scalar value to this vector.
+	function adds(s)
+	{
+		x += s;
+		y += s;
+		z += s;
+	}
+	
 	// subtracts another vector from this vector.
 	function sub(v)
 	{
 		x -= v.x;
 		y -= v.y;
 		z -= v.z;
+	}
+	
+	// subtracts a scalar value from this vector.
+	function subs(s)
+	{
+		x -= s;
+		y -= s;
+		z -= s;
 	}
 	
 	// multiplies this vector by another vector.
@@ -43,12 +59,28 @@ function vec3(_x, _y, _z)
 		z *= v.z;
 	}
 	
+	// multiplies this vector by a scalar value.
+	function muls(s)
+	{
+		x *= s;
+		y *= s;
+		z *= s;
+	}
+	
 	// divides this vector by another vector.
 	function divide(v)
 	{
 		x /= v.x;
 		y /= v.y;
 		z /= v.z;
+	}
+	
+	// divides this vector by a scalar value.
+	function divides(s)
+	{
+		x /= s;
+		y /= s;
+		z /= s;
 	}
 	
 	// returns the length of this vector.
@@ -110,10 +142,22 @@ function vec3_add(a, b)
 	return new vec3(a.x + b.x, a.y + b.y, a.z + b.z);
 }
 
+// returns a new vector with vector a + s.
+function vec3_adds(a, s)
+{
+	return new vec3(a.x + s, a.y + s, a.z + s);
+}
+
 // returns a new vector with vector a - b.
 function vec3_sub(a, b)
 {
 	return new vec3(a.x - b.x, a.y - b.y, a.z - b.z);
+}
+
+// returns a new vector with vector a - s.
+function vec3_subs(a, s)
+{
+	return new vec3(a.x - s, a.y - s, a.z - s);
 }
 
 // returns a new vector with vector a * b.
@@ -122,10 +166,22 @@ function vec3_mul(a, b)
 	return new vec3(a.x * b.x, a.y * b.y, a.z * b.z);
 }
 
+// returns a new vector with vector a * s.
+function vec3_muls(a, s)
+{
+	return new vec3(a.x * s, a.y * s, a.z * s);
+}
+
 // returns a new vector with vector a / b.
 function vec3_divide(a, b)
 {
 	return new vec3(a.x / b.x, a.y / b.y, a.z / b.z);
+}
+
+// returns a new vector with vector a / s.
+function vec3_divides(a, s)
+{
+	return new vec3(a.x / s, a.y / s, a.z / s);
 }
 
 // linearly interpolates between vector a and b by t.
@@ -150,7 +206,7 @@ function vec3_dot(lhs, rhs)
 function vec3_reflect(direction, normal)
 {
 	var v = vec3(-2.0, -2.0, -2.0);
-	v.mul(vec3_dot(normal, direction));
+	v.muls(vec3_dot(normal, direction));
 	v.mul(normal);
 	v.add(direction);
 	return v;
@@ -180,4 +236,24 @@ function vec3_min(a, b)
 function vec3_max(a, b)
 {
 	return new vec3(max(a.x, b.x), max(a.y, b.y), max(a.z, b.z));
+}
+
+// returns a vector where a vector is projected onto another vector.
+function vec3_project(vector, normal)
+{
+	var n = vec3_dot(normal, normal);
+	if (n < math_get_epsilon())
+		return new vec3(0.0, 0.0, 0.0);
+	var v = new vec3(normal.x, normal.y, normal.z);
+	v.muls(vec3_dot(vector, normal));
+	v.divide(n);
+	return v;
+}
+
+// projects a vector onto a plane defined by a normal orthogonal to the plane.
+function vec3_project_on_plane(vector, plane_normal)
+{
+	var v = new vec3(vector.x, vector.y, vector.z);
+	v.sub(vec3_project(vector, plane_normal));
+	return v;
 }

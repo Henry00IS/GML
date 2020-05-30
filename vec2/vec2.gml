@@ -24,11 +24,25 @@ function vec2(_x, _y)
 		y += v.y;
 	}
 	
+	// adds a scalar value to this vector.
+	function adds(s)
+	{
+		x += s;
+		y += s;
+	}
+	
 	// subtracts another vector from this vector.
 	function sub(v)
 	{
 		x -= v.x;
 		y -= v.y;
+	}
+	
+	// subtracts a scalar value from this vector.
+	function subs(s)
+	{
+		x -= s;
+		y -= s;
 	}
 	
 	// multiplies this vector by another vector.
@@ -38,11 +52,25 @@ function vec2(_x, _y)
 		y *= v.y;
 	}
 	
+	// multiplies this vector by a scalar value.
+	function muls(s)
+	{
+		x *= s;
+		y *= s;
+	}
+	
 	// divides this vector by another vector.
 	function divide(v)
 	{
 		x /= v.x;
 		y /= v.y;
+	}
+	
+	// divides this vector by a scalar value.
+	function divides(s)
+	{
+		x /= s;
+		y /= s;
 	}
 	
 	// returns the length of this vector.
@@ -102,10 +130,22 @@ function vec2_add(a, b)
 	return new vec2(a.x + b.x, a.y + b.y);
 }
 
+// returns a new vector with vector a + s.
+function vec2_adds(a, s)
+{
+	return new vec2(a.x + s, a.y + s);
+}
+
 // returns a new vector with vector a - b.
 function vec2_sub(a, b)
 {
 	return new vec2(a.x - b.x, a.y - b.y);
+}
+
+// returns a new vector with vector a - s.
+function vec2_subs(a, s)
+{
+	return new vec2(a.x - s, a.y - s);
 }
 
 // returns a new vector with vector a * b.
@@ -114,10 +154,22 @@ function vec2_mul(a, b)
 	return new vec2(a.x * b.x, a.y * b.y);
 }
 
+// returns a new vector with vector a * s.
+function vec2_muls(a, s)
+{
+	return new vec2(a.x * s, a.y * s);
+}
+
 // returns a new vector with vector a / b.
 function vec2_divide(a, b)
 {
 	return new vec2(a.x / b.x, a.y / b.y);
+}
+
+// returns a new vector with vector a / s.
+function vec2_divides(a, s)
+{
+	return new vec2(a.x / s, a.y / s);
 }
 
 // linearly interpolates between vector a and b by t.
@@ -136,7 +188,7 @@ function vec2_dot(lhs, rhs)
 function vec2_reflect(direction, normal)
 {
 	var v = new vec2(-2.0, -2.0);
-	v.mul(vec2_dot(normal, direction));
+	v.muls(vec2_dot(normal, direction));
 	v.mul(normal);
 	v.add(direction);
 	return v;
