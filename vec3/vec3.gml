@@ -1,5 +1,5 @@
 // represents a 3-dimensional vector.
-function vec3(_x, _y, _z)
+function vec3(_x, _y, _z) constructor
 {
 	x = _x;
 	y = _y;
@@ -256,4 +256,12 @@ function vec3_project_on_plane(vector, plane_normal)
 	var v = new vec3(vector.x, vector.y, vector.z);
 	v.sub(vec3_project(vector, plane_normal));
 	return v;
+}
+
+// returns the direction vector between vector a and b.
+function vec3_direction(a, b)
+{
+	var v = new vec3(a.x, a.y, a.z);
+	v.sub(b);
+	return v.normalized();
 }

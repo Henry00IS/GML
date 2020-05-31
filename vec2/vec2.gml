@@ -1,5 +1,5 @@
 // represents a 2-dimensional vector.
-function vec2(_x, _y)
+function vec2(_x, _y) constructor
 {
 	x = _x;
 	y = _y;
