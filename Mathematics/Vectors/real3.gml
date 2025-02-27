@@ -407,7 +407,7 @@ function real3(_x = 0, _y = 0, _z = 0) constructor {
     /// @param {struct.real3} _other The secondary vector for this math operation.
     /// @returns {real} The dot product of two vectors.
     static dot = function (_other) {
-        return x * _other.x + y * _other.y + z * _other.z
+        return x * _other.x + y * _other.y + z * _other.z;
     }
     
     /// Computes the per-component e^(self), the exponential function.
@@ -1408,6 +1408,897 @@ function real3(_x = 0, _y = 0, _z = 0) constructor {
     /// @returns {struct.real3} The resulting vector.
     static zzz = function () {
         return new real3(
+            z,
+            z,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.x, self.x, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xxxx = function () {
+        return new real4(
+            x,
+            x,
+            x,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.x, self.x, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xxxy = function () {
+        return new real4(
+            x,
+            x,
+            x,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.x, self.x, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xxxz = function () {
+        return new real4(
+            x,
+            x,
+            x,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.x, self.y, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xxyx = function () {
+        return new real4(
+            x,
+            x,
+            y,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.x, self.y, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xxyy = function () {
+        return new real4(
+            x,
+            x,
+            y,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.x, self.y, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xxyz = function () {
+        return new real4(
+            x,
+            x,
+            y,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.x, self.z, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xxzx = function () {
+        return new real4(
+            x,
+            x,
+            z,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.x, self.z, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xxzy = function () {
+        return new real4(
+            x,
+            x,
+            z,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.x, self.z, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xxzz = function () {
+        return new real4(
+            x,
+            x,
+            z,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.y, self.x, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xyxx = function () {
+        return new real4(
+            x,
+            y,
+            x,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.y, self.x, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xyxy = function () {
+        return new real4(
+            x,
+            y,
+            x,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.y, self.x, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xyxz = function () {
+        return new real4(
+            x,
+            y,
+            x,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.y, self.y, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xyyx = function () {
+        return new real4(
+            x,
+            y,
+            y,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.y, self.y, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xyyy = function () {
+        return new real4(
+            x,
+            y,
+            y,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.y, self.y, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xyyz = function () {
+        return new real4(
+            x,
+            y,
+            y,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.y, self.z, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xyzx = function () {
+        return new real4(
+            x,
+            y,
+            z,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.y, self.z, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xyzy = function () {
+        return new real4(
+            x,
+            y,
+            z,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.y, self.z, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xyzz = function () {
+        return new real4(
+            x,
+            y,
+            z,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.z, self.x, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xzxx = function () {
+        return new real4(
+            x,
+            z,
+            x,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.z, self.x, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xzxy = function () {
+        return new real4(
+            x,
+            z,
+            x,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.z, self.x, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xzxz = function () {
+        return new real4(
+            x,
+            z,
+            x,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.z, self.y, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xzyx = function () {
+        return new real4(
+            x,
+            z,
+            y,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.z, self.y, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xzyy = function () {
+        return new real4(
+            x,
+            z,
+            y,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.z, self.y, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xzyz = function () {
+        return new real4(
+            x,
+            z,
+            y,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.z, self.z, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xzzx = function () {
+        return new real4(
+            x,
+            z,
+            z,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.z, self.z, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xzzy = function () {
+        return new real4(
+            x,
+            z,
+            z,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.x, self.z, self.z, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static xzzz = function () {
+        return new real4(
+            x,
+            z,
+            z,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.x, self.x, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yxxx = function () {
+        return new real4(
+            y,
+            x,
+            x,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.x, self.x, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yxxy = function () {
+        return new real4(
+            y,
+            x,
+            x,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.x, self.x, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yxxz = function () {
+        return new real4(
+            y,
+            x,
+            x,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.x, self.y, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yxyx = function () {
+        return new real4(
+            y,
+            x,
+            y,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.x, self.y, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yxyy = function () {
+        return new real4(
+            y,
+            x,
+            y,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.x, self.y, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yxyz = function () {
+        return new real4(
+            y,
+            x,
+            y,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.x, self.z, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yxzx = function () {
+        return new real4(
+            y,
+            x,
+            z,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.x, self.z, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yxzy = function () {
+        return new real4(
+            y,
+            x,
+            z,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.x, self.z, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yxzz = function () {
+        return new real4(
+            y,
+            x,
+            z,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.y, self.x, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yyxx = function () {
+        return new real4(
+            y,
+            y,
+            x,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.y, self.x, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yyxy = function () {
+        return new real4(
+            y,
+            y,
+            x,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.y, self.x, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yyxz = function () {
+        return new real4(
+            y,
+            y,
+            x,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.y, self.y, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yyyx = function () {
+        return new real4(
+            y,
+            y,
+            y,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.y, self.y, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yyyy = function () {
+        return new real4(
+            y,
+            y,
+            y,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.y, self.y, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yyyz = function () {
+        return new real4(
+            y,
+            y,
+            y,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.y, self.z, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yyzx = function () {
+        return new real4(
+            y,
+            y,
+            z,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.y, self.z, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yyzy = function () {
+        return new real4(
+            y,
+            y,
+            z,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.y, self.z, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yyzz = function () {
+        return new real4(
+            y,
+            y,
+            z,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.z, self.x, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yzxx = function () {
+        return new real4(
+            y,
+            z,
+            x,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.z, self.x, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yzxy = function () {
+        return new real4(
+            y,
+            z,
+            x,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.z, self.x, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yzxz = function () {
+        return new real4(
+            y,
+            z,
+            x,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.z, self.y, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yzyx = function () {
+        return new real4(
+            y,
+            z,
+            y,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.z, self.y, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yzyy = function () {
+        return new real4(
+            y,
+            z,
+            y,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.z, self.y, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yzyz = function () {
+        return new real4(
+            y,
+            z,
+            y,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.z, self.z, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yzzx = function () {
+        return new real4(
+            y,
+            z,
+            z,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.z, self.z, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yzzy = function () {
+        return new real4(
+            y,
+            z,
+            z,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.y, self.z, self.z, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static yzzz = function () {
+        return new real4(
+            y,
+            z,
+            z,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.x, self.x, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zxxx = function () {
+        return new real4(
+            z,
+            x,
+            x,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.x, self.x, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zxxy = function () {
+        return new real4(
+            z,
+            x,
+            x,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.x, self.x, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zxxz = function () {
+        return new real4(
+            z,
+            x,
+            x,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.x, self.y, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zxyx = function () {
+        return new real4(
+            z,
+            x,
+            y,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.x, self.y, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zxyy = function () {
+        return new real4(
+            z,
+            x,
+            y,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.x, self.y, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zxyz = function () {
+        return new real4(
+            z,
+            x,
+            y,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.x, self.z, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zxzx = function () {
+        return new real4(
+            z,
+            x,
+            z,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.x, self.z, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zxzy = function () {
+        return new real4(
+            z,
+            x,
+            z,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.x, self.z, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zxzz = function () {
+        return new real4(
+            z,
+            x,
+            z,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.y, self.x, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zyxx = function () {
+        return new real4(
+            z,
+            y,
+            x,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.y, self.x, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zyxy = function () {
+        return new real4(
+            z,
+            y,
+            x,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.y, self.x, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zyxz = function () {
+        return new real4(
+            z,
+            y,
+            x,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.y, self.y, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zyyx = function () {
+        return new real4(
+            z,
+            y,
+            y,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.y, self.y, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zyyy = function () {
+        return new real4(
+            z,
+            y,
+            y,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.y, self.y, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zyyz = function () {
+        return new real4(
+            z,
+            y,
+            y,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.y, self.z, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zyzx = function () {
+        return new real4(
+            z,
+            y,
+            z,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.y, self.z, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zyzy = function () {
+        return new real4(
+            z,
+            y,
+            z,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.y, self.z, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zyzz = function () {
+        return new real4(
+            z,
+            y,
+            z,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.z, self.x, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zzxx = function () {
+        return new real4(
+            z,
+            z,
+            x,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.z, self.x, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zzxy = function () {
+        return new real4(
+            z,
+            z,
+            x,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.z, self.x, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zzxz = function () {
+        return new real4(
+            z,
+            z,
+            x,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.z, self.y, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zzyx = function () {
+        return new real4(
+            z,
+            z,
+            y,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.z, self.y, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zzyy = function () {
+        return new real4(
+            z,
+            z,
+            y,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.z, self.y, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zzyz = function () {
+        return new real4(
+            z,
+            z,
+            y,
+            z
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.z, self.z, self.x)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zzzx = function () {
+        return new real4(
+            z,
+            z,
+            z,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.z, self.z, self.y)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zzzy = function () {
+        return new real4(
+            z,
+            z,
+            z,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real4(self.z, self.z, self.z, self.z)`.
+    /// @returns {struct.real4} The resulting vector.
+    static zzzz = function () {
+        return new real4(
+            z,
             z,
             z,
             z
