@@ -264,7 +264,6 @@ function real2(_x = 0, _y = 0) constructor {
         y = arctan(y);
     }
     
-    
     /// Computes the four quadrant arctangent of y and x (in radians).
     /// @returns {real}
     static atan2 = function () {
@@ -728,7 +727,7 @@ function real2(_x = 0, _y = 0) constructor {
     
     /// Computes the refraction vector for `self` (as incident vector), normal, and refraction index.
     /// @param {struct.real2} _normal The secondary vector for this math operation.
-    /// @param {real} eta The refraction index.
+    /// @param {real} _eta The refraction index.
     /// @returns {struct.real2} The resulting vector.
     static refract = function (_normal, _eta) {
         var _dot_n_i = dot(_normal);
@@ -747,7 +746,7 @@ function real2(_x = 0, _y = 0) constructor {
     
     /// Sets this `real2` to the refraction vector for `self` (as incident vector), normal, and refraction index.
     /// @param {struct.real2} _normal The secondary vector for this math operation.
-    /// @param {real} eta The refraction index.
+    /// @param {real} _eta The refraction index.
     /// @returns {undefined}
     static self_refract = function (_normal, _eta) {
         var _dot_n_i = dot(_normal);
@@ -961,7 +960,6 @@ function real2(_x = 0, _y = 0) constructor {
         y = trunc(y);
     }
     
-    
     /// Computes a swizzled vector using the constructor `new real2(self.x, self.x)`.
     /// @returns {struct.real2} The resulting vector.
     static xx = function () {
@@ -993,6 +991,86 @@ function real2(_x = 0, _y = 0) constructor {
     /// @returns {struct.real2} The resulting vector.
     static yy = function () {
         return new real2(
+            y,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real3(self.x, self.x, self.x)`.
+    /// @returns {struct.real3} The resulting vector.
+    static xxx = function () {
+        return new real3(
+            x,
+            x,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real3(self.x, self.x, self.y)`.
+    /// @returns {struct.real3} The resulting vector.
+    static xxy = function () {
+        return new real3(
+            x,
+            x,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real3(self.x, self.y, self.x)`.
+    /// @returns {struct.real3} The resulting vector.
+    static xyx = function () {
+        return new real3(
+            x,
+            y,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real3(self.x, self.y, self.y)`.
+    /// @returns {struct.real3} The resulting vector.
+    static xyy = function () {
+        return new real3(
+            x,
+            y,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real3(self.y, self.x, self.x)`.
+    /// @returns {struct.real3} The resulting vector.
+    static yxx = function () {
+        return new real3(
+            y,
+            x,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real3(self.y, self.x, self.y)`.
+    /// @returns {struct.real3} The resulting vector.
+    static yxy = function () {
+        return new real3(
+            y,
+            x,
+            y
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real3(self.y, self.y, self.x)`.
+    /// @returns {struct.real3} The resulting vector.
+    static yyx = function () {
+        return new real3(
+            y,
+            y,
+            x
+        );
+    }
+    
+    /// Computes a swizzled vector using the constructor `new real3(self.y, self.y, self.y)`.
+    /// @returns {struct.real3} The resulting vector.
+    static yyy = function () {
+        return new real3(
+            y,
             y,
             y
         );

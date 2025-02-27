@@ -14,3 +14,4 @@ Collection of useful scripts I made over the years for Game Maker Studio 2.
 - [tanh](/Mathematics/Trigonometry/tanh.gml) - (HLSL Inspired)
 ## Vectors
 - [real2](/Mathematics/Vectors/real2.gml) - 2-Dimensional Vector (HLSL Inspired).
+- [real3](/Mathematics/Vectors/real3.gml) - 3-Dimensional Vector (HLSL Inspired).
