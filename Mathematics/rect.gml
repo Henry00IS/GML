@@ -75,8 +75,8 @@ function rect(_x = 0, _y = 0, _width = 0, _height = 0) constructor {
     /// Sets the minimum position of the `rect`.
     /// @param {struct.real2} _value The new position vector.
     static set_min = function (_value) {
-        set_x_min(value.x);
-        set_y_min(value.y);
+        set_x_min(_value.x);
+        set_y_min(_value.y);
     }
 
     /// Gets the maximum position of the `rect`.
@@ -90,8 +90,8 @@ function rect(_x = 0, _y = 0, _width = 0, _height = 0) constructor {
     /// Sets the maximum position of the `rect`.
     /// @param {struct.real2} _value The new position vector.
     static set_max = function (_value) {
-        set_x_max(value.x);
-        set_y_max(value.y);
+        set_x_max(_value.x);
+        set_y_max(_value.y);
     }
 
     /// Gets the width of the `rect` (same as property `width`).
