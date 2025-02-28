@@ -1044,6 +1044,12 @@ function real3(_x = 0, _y = 0, _z = 0) constructor {
         z = tanh(z);
     }
     
+    /// Implements `string(self)` (called during struct to string conversions).
+    /// @returns {string}
+    static toString = function () {
+        return "{ x : " + string(x) + ", y : " + string(y) + ", z : " + string(z) + " }";
+    }
+    
     /// Computes the per-component truncated integer portion.
     /// @returns {struct.real3} The resulting vector.
     static trunc_ = function () { // GML name conflict.

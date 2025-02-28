@@ -1,4 +1,3 @@
-
 /// Creates a 2D rectangle containing a position and size.
 /// @param {real} _x The x-position of the rect.
 /// @param {real} _y The y-position of the rect.

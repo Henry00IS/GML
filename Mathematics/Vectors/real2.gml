@@ -944,6 +944,12 @@ function real2(_x = 0, _y = 0) constructor {
         y = tanh(y);
     }
     
+    /// Implements `string(self)` (called during struct to string conversions).
+    /// @returns {string}
+    static toString = function () {
+        return "{ x : " + string(x) + ", y : " + string(y) + " }";
+    }
+    
     /// Computes the per-component truncated integer portion.
     /// @returns {struct.real2} The resulting vector.
     static trunc_ = function () { // GML name conflict.
