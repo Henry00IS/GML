@@ -1,4 +1,4 @@
-# Game Maker Studio 2.3 Scripts
+# Game Maker Studio 2 Scripts
 Collection of useful scripts I made over the years for Game Maker Studio 2.
 
 # Mathematics
