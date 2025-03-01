@@ -6,7 +6,7 @@ Collection of useful scripts I made over the years for Game Maker Studio 2.
 - [draw_sprite_centered_stretched](/Drawing/Sprites/draw_sprite_centered_stretched.gml)
 
 # Events
-- [broadcast_event](/Events/broadcast_event.gml)
+- [event_broadcast](/Events/event_broadcast.gml)
 
 # Mathematics
 ## Geometry
