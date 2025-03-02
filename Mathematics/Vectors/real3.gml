@@ -529,6 +529,12 @@ function real3(_x = 0, _y = 0, _z = 0) constructor {
         return sqrt(x * x + y * y + z * z);
     }
     
+    /// Computes the squared length (magnitude) scalar of this vector.
+    /// @returns {real} The squared length scalar of this vector.
+    static length_squared = function () {
+        return x * x + y * y + z * z;
+    }
+    
     /// Computes the linear interpolation between two vectors.
     /// @param {struct.real3} _other The secondary vector for this math operation.
     /// @param {real} _t The interpolant t (unbounded).

@@ -11,6 +11,7 @@ Collection of useful scripts I made over the years for Game Maker Studio 2.
 # Mathematics
 ## Geometry
 - [bounds](/Mathematics/Geometry/bounds.gml) - 3-Dimensional Bounds (Unity Inspired)
+- [cylinder](/Mathematics/Geometry/cylinder.gml) - 3-Dimensional Cylinder
 - [rect](/Mathematics/Geometry/rect.gml) - 2-Dimensional Rect (Unity Inspired)
 ## Interpolation
 - [smoothstep](/Mathematics/Interpolation/smoothstep.gml) - (HLSL Inspired)

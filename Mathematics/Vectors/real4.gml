@@ -580,6 +580,12 @@ function real4(_x = 0, _y = 0, _z = 0, _w = 0) constructor {
         return sqrt(x * x + y * y + z * z + w * w);
     }
     
+    /// Computes the squared length (magnitude) scalar of this vector.
+    /// @returns {real} The squared length scalar of this vector.
+    static length_squared = function () {
+        return x * x + y * y + z * z + w * w;
+    }
+    
     /// Computes the linear interpolation between two vectors.
     /// @param {struct.real4} _other The secondary vector for this math operation.
     /// @param {real} _t The interpolant t (unbounded).
