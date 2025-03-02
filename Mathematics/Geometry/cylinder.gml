@@ -34,7 +34,7 @@ function cylinder(_center, _radius, _height) constructor {
         return center.add(new real3(radius, radius, height * 0.5));
     }
     
-    /// Checks whether the given point is inside this cylinder.
+    /// Checks whether the given point is inside this `cylinder`.
     /// @param {struct.real3} _point The point to check.
     /// @return {bool} True if the point is inside the cylinder, else false.
     static contains = function (_point) {
@@ -63,6 +63,9 @@ function cylinder(_center, _radius, _height) constructor {
         radius = max(radius, center.xy().distance(_point.xy()));
     }
     
+    /// Grows this `cylinder` to include the given `cylinder`.
+    /// @param {struct.cylinder} _cylinder The `cylinder` to be included.
+    /// @returns {undefined}
     static encapsulate_cylinder = function (_cylinder) {
         // expand height.
         height = max(center.z + height * 0.5, _cylinder.center.z + _cylinder.height * 0.5)
@@ -73,8 +76,8 @@ function cylinder(_center, _radius, _height) constructor {
         radius = max(radius, _cylinder.radius, center.xy().distance(_cylinder.center.xy()) + _cylinder.radius);
     }
     
-    /// Checks whether another cylinder intersect with this cylinder.
-    /// @param {struct.cylinder} _cylinder The cylinder to check against.
+    /// Checks whether another `cylinder` intersect with this `cylinder`.
+    /// @param {struct.cylinder} _cylinder The `cylinder` to check against.
     /// @return {bool} True when the cylinders intersect else false.
     static intersects = function (_cylinder) {
         return abs(center.z - _cylinder.center.z) <= (height + _cylinder.height) * 0.5
@@ -83,7 +86,7 @@ function cylinder(_center, _radius, _height) constructor {
     
     /// Checks whether a `bounds` intersect with this cylinder.
     /// @param {struct.bounds} _bounds The bounds to check against.
-    /// @return {bool} True when the geometry intersect else false.
+    /// @return {bool} True when the geometries intersect else false.
     static intersects_bounds = function (_bounds) {
         // check z-axis (height) overlap.
         if (abs(center.z - _bounds.center.z) > (height + _bounds.size.z) * 0.5)
