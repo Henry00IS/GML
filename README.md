@@ -17,6 +17,7 @@ Collection of useful scripts I made over the years for Game Maker Studio 2.
 - [smoothstep](/Mathematics/Interpolation/smoothstep.gml) - (HLSL Inspired)
 ## Rounding
 - [trunc](/Mathematics/Rounding/trunc.gml) - (HLSL Inspired)
+- [normal_to_cardinal](/Mathematics/Rounding/normal_to_cardinal.gml)
 ## Trigonometry
 - [cosh](/Mathematics/Trigonometry/cosh.gml) - (HLSL Inspired)
 - [ldexp](/Mathematics/Trigonometry/ldexp.gml) - (HLSL Inspired)
